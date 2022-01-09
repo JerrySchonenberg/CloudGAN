@@ -1,0 +1,3 @@
+input_res: 256
+activation: 'relu'
+activation_out: 'sigmoid'
