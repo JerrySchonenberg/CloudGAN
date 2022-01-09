@@ -86,10 +86,10 @@ For the SN-PatchGAN, we would like you to refer you to their [GitHub](https://gi
 
 ### Cloud removal: CloudGAN
 
-In order to run the complete method, use the provided `cloudgan.py` script. With the following command, you can input your own satellite image (**must have a resolution of 256x256**):
+In order to run the complete method, use the provided `CloudGAN.py` script. With the following command, you can input your own satellite image (**must have a resolution of 256x256**):
 
 ```shell
-python3 -m cloudgan --img [path_to_input] --target [path_to_target] --mask [path_to_mask] --output [path_to_output] --weights_GAN [GAN_checkpoint] --config_GAN [.yml file] --weights_AE [AE_checkpoint] --config_AE [.yml file]
+python3 -m CloudGAN --img [path_to_input] --target [path_to_target] --mask [path_to_mask] --output [path_to_output] --weights_GAN [GAN_checkpoint] --config_GAN [.yml file] --weights_AE [AE_checkpoint] --config_AE [.yml file]
 ```
 
 In this example, the generated mask and output files are stored in their given paths. Additionally, it is possible to provide your own cloud mask. In this case, use the `--mask` option to provide the path to your mask (three channels, so 256x256x3, with values in [0,255]) and enable the `--no_AE` flag. The `--target` is optional, but if given then it computes the SSIM and PSNR values between the generated and target images. Lastly, there is the option to show more debug-messages from TensorFlow. To enable this add the `--debug` option to your command.
