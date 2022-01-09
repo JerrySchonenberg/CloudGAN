@@ -1,5 +1,5 @@
-# CloudGAN
-![tensorflow](https://img.shields.io/badge/tensorflow-v1.15.0-blue.svg)![license](https://img.shields.io/badge/license-MIT-blue.svg)
+# CloudGAN: Detecting and Removing Clouds from RGB-images using Image Inpainting
+![tensorflow](https://img.shields.io/badge/tensorflow-v1.15.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 #### By Sem Kluiver and Jerry Schonenberg
 
