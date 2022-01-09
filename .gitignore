@@ -1,0 +1,5 @@
+__pycache__/
+cloud_removal/model_logs/
+data*/
+*.svg
+*.h5
