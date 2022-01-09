@@ -1,8 +1,6 @@
 # CloudGAN: Detecting and Removing Clouds from RGB-images using Image Inpainting
 ![tensorflow](https://img.shields.io/badge/tensorflow-v1.15.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-#### By Sem Kluiver and Jerry Schonenberg
-
 This repository contains the code for the **CloudGAN**: a method to detect and inpaint clouds from satellite RGB-images. It consists out of two components:  cloud detection with an auto-encoder (AE) and cloud inpainting with the [SN-PatchGAN](https://arxiv.org/abs/1806.03589) ([GitHub](https://github.com/JiahuiYu/generative_inpainting)). An overview of the method is given in the figure below.
 
 ![CloudGAN visualization](./figures/CloudGAN.svg)
@@ -41,6 +39,7 @@ Here, an overview is given of all included files. **Note that some scripts/code 
 | cloud_removal      | Files in order to train the SN-PatchGAN on the cloud inpainting task |
 | figures            | Figures for the README                                       |
 | `CloudGAN.py`      | Python script to run the CloudGAN on your input image        |
+| `paper.pdf`        | Paper describing the CloudGAN                                |
 | `requirements.txt` | Python package dependencies                                  |
 
 
@@ -62,7 +61,7 @@ For these packages holds that this exact version needs to be used. For all other
 
 ## Usage <div id="usage"></div>
 
-The weights that we obtained during training can be downloaded with the following links: [AE](), [U-Net]() and [SN-PatchGAN]().
+The weights that we obtained during training can be downloaded with the following links: [AE](https://drive.google.com/file/d/15HHF3ALyU1Cy7pDjs5yb5u-McyZTqYkS/view?usp=sharing), [U-Net](https://drive.google.com/file/d/1r6ya20ZwH6MO_RH0tlCwUbrwrnCvUsa3/view?usp=sharing) and [SN-PatchGAN](https://drive.google.com/file/d/1ibph7qO3y-Z5S-03x9GWTM3UhBae4Ow_/view?usp=sharing).
 
 
 
@@ -89,10 +88,15 @@ For the SN-PatchGAN, we would like you to refer you to their [GitHub](https://gi
 In order to run the complete method, use the provided `CloudGAN.py` script. With the following command, you can input your own satellite image (**must have a resolution of 256x256**):
 
 ```shell
-python3 -m CloudGAN --img [path_to_input] --target [path_to_target] --mask [path_to_mask] --output [path_to_output] --weights_GAN [GAN_checkpoint] --config_GAN [.yml file] --weights_AE [AE_checkpoint] --config_AE [.yml file]
+python3 -m CloudGAN --img [path_to_input] --target [path_to_target] 
+                    --mask [path_to_mask] --output [path_to_output] 
+                    --weights_GAN [GAN_checkpoint] --config_GAN [.yml file] 
+                    --weights_AE [AE_checkpoint] --config_AE [.yml file]
 ```
 
 In this example, the generated mask and output files are stored in their given paths. Additionally, it is possible to provide your own cloud mask. In this case, use the `--mask` option to provide the path to your mask (three channels, so 256x256x3, with values in [0,255]) and enable the `--no_AE` flag. The `--target` is optional, but if given then it computes the SSIM and PSNR values between the generated and target images. Lastly, there is the option to show more debug-messages from TensorFlow. To enable this add the `--debug` option to your command.
+
+For the GAN-weights, link to the `checkpoint` file. As for the AE-weights, link to the `checkpoint.h5` file.
 
 
 
@@ -100,5 +104,5 @@ In this example, the generated mask and output files are stored in their given p
 
 Two datasets are used in order to train the models: [38-Cloud](https://github.com/SorourMo/38-Cloud-A-Cloud-Segmentation-Dataset) for cloud detection and [RICE](https://github.com/BUPTLdy/RICE_DATASET) for the cloud removal part. However, since we have had to preprocess the datasets, we also provide our versions of these datasets below. If you want to know the specifics of the preprocessing, we refer you to the paper.
 
-* Cloud detection (38-Cloud): [link]()
-* Cloud removal (RICE): [link]()
+* Cloud detection (38-Cloud): [link](https://drive.google.com/file/d/1115zF8v_7PsX1qcKJbejtZV-MSCiyYLU/view?usp=sharing)
+* Cloud removal (RICE): [link](https://drive.google.com/file/d/1_H26erCT3B8N-F75WvryMkvggPTTTYmM/view?usp=sharing)
