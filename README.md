@@ -53,6 +53,8 @@ python==3.6.13
 tensorflow-gpu==1.15
 numpy==1.19.5
 h5py==2.10.0
+neuralgym
+scikit-image
 ```
 
 For these packages holds that this exact version needs to be used. For all other dependencies holds that other versions might also work. A complete list is given in `requirements.txt`, but some may not be required.
