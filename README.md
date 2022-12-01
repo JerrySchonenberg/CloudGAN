@@ -1,7 +1,7 @@
 # CloudGAN: Detecting and Removing Clouds from RGB-images using Image Inpainting
-![tensorflow](https://img.shields.io/badge/tensorflow-v1.15.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
+![python](https://img.shields.io/badge/python-v3.6.13-blue.svg) ![tensorflow](https://img.shields.io/badge/tensorflow-v1.15.0-blue.svg) ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-This repository contains the code for the **CloudGAN**: a method to detect and inpaint clouds of satellite RGB-images. It consists out of two components:  cloud detection with an auto-encoder (AE) and cloud inpainting with the [SN-PatchGAN](https://arxiv.org/abs/1806.03589) ([GitHub](https://github.com/JiahuiYu/generative_inpainting)). An overview of the method is given in the figure below.
+This repository contains the code for the **CloudGAN**: a method to detect and inpaint clouds of satellite RGB-images. It consists out of two components:  cloud detection with an auto-encoder (AE) and cloud inpainting with the [SN-PatchGAN](https://arxiv.org/abs/1806.03589) ([GitHub](https://github.com/JiahuiYu/generative_inpainting)). Please note that a different license applies to the code for SN-PatchGAN (see the `cloud_removal` directory).  An overview of the method is given in the figure below.
 
 ![CloudGAN visualization](./figures/CloudGAN.svg)
 
@@ -49,15 +49,14 @@ Here, an overview is given of all included files. **Note that some scripts/code 
 The following requirements are needed in order to successfully run the CloudGAN code:
 
 ```
-python==3.6.13
 tensorflow-gpu==1.15
 numpy==1.19.5
 h5py==2.10.0
-neuralgym
+neuralgym @ git+https://github.com/JiahuiYu/neuralgym@88292adb524186693a32404c0cfdc790426ea441
 scikit-image
 ```
 
-For these packages holds that this exact version needs to be used. For all other dependencies holds that other versions might also work. A complete list is given in `requirements.txt`, but some may not be required.
+We used Python **v3.6.13**. For these packages holds that this exact version needs to be used. For all other dependencies holds that other versions might also work. A complete list is given in `requirements.txt`, but some may not be required.
 
 
 
