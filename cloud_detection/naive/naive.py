@@ -8,8 +8,8 @@ from tqdm import tqdm
 RES = 256  # Resolution of images
 
 # Location of 38-Cloud data
-TRAIN = "../src/datasets/38-cloud/train/"
-TEST  = "../src/datasets/38-cloud/test/"
+TRAIN = "../../src/datasets/38-cloud/train/"
+TEST  = "../../src/datasets/38-cloud/test/"
 IMG   = "img/data/"
 MASK  = "mask/data/"
 
