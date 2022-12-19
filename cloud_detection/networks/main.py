@@ -23,9 +23,9 @@ def parse_CL():
                        help="directory where output data is stored")
    
    # Dataset arguments
-   parser.add_argument("--dataset_train", type=str, default="../datasets/38-cloud/train/",
+   parser.add_argument("--dataset_train", type=str, default="../../datasets/38-cloud/train/",
                        help="dataset to train AE on")
-   parser.add_argument("--dataset_test", type=str, default="../datasets/38-cloud/test/",
+   parser.add_argument("--dataset_test", type=str, default="../../datasets/38-cloud/test/",
                        help="dataset to test AE on")
    parser.add_argument("--augmentation", action="store_true",
                        help="enabling data augmentation during training")
