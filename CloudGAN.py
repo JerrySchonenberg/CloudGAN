@@ -6,7 +6,7 @@ import numpy as np
 import neuralgym as ng
 import tensorflow as tf
 
-from cloud_detection.autoencoder import AE
+from cloud_detection.networks.autoencoder import AE
 from cloud_removal.inpaint_model import InpaintCAModel
 
 
