@@ -1,69 +1,8 @@
-absl-py @ file:///tmp/build/80754af9/absl-py_1623867049735/work
-astor==0.8.1
-astunparse==1.6.3
-cached-property @ file:///tmp/build/80754af9/cached-property_1600785575025/work
-cachetools==4.2.4
-certifi==2021.5.30
-charset-normalizer==2.0.8
-coverage @ file:///tmp/build/80754af9/coverage_1614614208500/work
-cycler==0.11.0
-Cython @ file:///tmp/build/80754af9/cython_1626256602391/work
-decorator==4.4.2
-flatbuffers==1.12
-gast==0.2.2
-GDAL==3.0.2
-google-auth==2.3.3
-google-auth-oauthlib==0.4.6
-google-pasta @ file:///Users/ktietz/demo/mc3/conda-bld/google-pasta_1630577991354/work
-grpcio==1.34.1
-h5py==2.10.0
-idna==3.3
-imageio==2.13.3
-joblib==1.1.0
-Keras==2.1.6
-Keras-Applications @ file:///tmp/build/80754af9/keras-applications_1594366238411/work
-keras-nightly==2.5.0.dev2021032900
-Keras-Preprocessing @ file:///tmp/build/80754af9/keras-preprocessing_1612283640596/work
-kiwisolver==1.3.1
-Markdown==3.1.1
-matplotlib==3.3.4
-networkx==2.5.1
-neuralgym @ git+https://github.com/JiahuiYu/neuralgym@88292adb524186693a32404c0cfdc790426ea441
+tensorflow-gpu==1.15
 numpy==1.19.5
-oauthlib==3.1.1
-opencv-python==4.5.4.60
-opt-einsum @ file:///tmp/build/80754af9/opt_einsum_1621500238896/work
-pandas==1.1.5
-Pillow==8.4.0
-protobuf==3.17.2
-pyasn1==0.4.8
-pyasn1-modules==0.2.8
-pyparsing==3.0.6
-python-dateutil==2.8.2
-python-fmask @ file:///home/conda/feedstock_root/build_artifacts/python-fmask_1604246833575/work
-pytz==2021.3
-PyWavelets==1.1.1
-PyYAML==6.0
-requests==2.26.0
-requests-oauthlib==1.3.0
-rsa==4.8
+h5py==2.10.0
+neuralgym @ git+https://github.com/JiahuiYu/neuralgym@88292adb524186693a32404c0cfdc790426ea441
 scikit-image==0.17.2
-scikit-learn==0.24.2
-scipy @ file:///tmp/build/80754af9/scipy_1597686635649/work
-seaborn==0.11.2
-six==1.15.0
-tensorboard==1.15.0
-tensorboard-data-server==0.6.1
-tensorboard-plugin-wit==1.8.0
-tensorflow==1.15.0
-tensorflow-estimator==1.15.1
-termcolor==1.1.0
-threadpoolctl==3.0.0
-tifffile==2020.9.3
-tqdm==4.62.3
-typing-extensions==3.7.4.3
-urllib3==1.26.7
-webencodings==0.5.1
-Werkzeug==0.16.1
-wrapt==1.12.1
-zipp @ file:///tmp/build/80754af9/zipp_1633618647012/work
+tqdm==4.64.1
+PyYAML==6.0
+opencv-python==4.6.0.66
