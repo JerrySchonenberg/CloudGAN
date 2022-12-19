@@ -110,3 +110,5 @@ Two datasets are used in order to train the models: [38-Cloud](https://github.co
 
 * Cloud detection (38-Cloud): [link](https://drive.google.com/file/d/1115zF8v_7PsX1qcKJbejtZV-MSCiyYLU/view?usp=sharing)
 * Cloud removal (RICE): [link](https://drive.google.com/file/d/1_H26erCT3B8N-F75WvryMkvggPTTTYmM/view?usp=sharing)
+
+We advise you to save the datasets in a new directory `datasets`, this way all default arguments and shellscripts should automatically work. Otherwise, you should set the relative paths accordingly.
