@@ -30,7 +30,7 @@ There are significant differences between the output of CloudGAN (**1**) and Clo
 
 ## Overview of repository <div id="overview"></div>
 
-Here, an overview is given of all included files. **Note that some scripts/code contain absolute/relative paths that might need to be updated for your personal machine.**
+Here, an overview is given of all included files. **Note that some scripts/code contain absolute/relative paths that might need to be updated for your personal machine. In case of the Bash-scripts, run them from the directory where they are saved, due to the relative paths.** The scripts should work if you store the datasets in a new directory called "datasets".
 
 | Directory          | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
@@ -54,6 +54,9 @@ numpy==1.19.5
 h5py==2.10.0
 neuralgym @ git+https://github.com/JiahuiYu/neuralgym@88292adb524186693a32404c0cfdc790426ea441
 scikit-image
+tqdm
+PyYAML
+opencv-python
 ```
 
 We used Python **v3.6.13**. For these packages holds that this exact version needs to be used. For all other dependencies holds that other versions might also work. A complete list is given in `requirements.txt`, but some may not be required.
@@ -68,7 +71,7 @@ The weights that we obtained during training can be downloaded with the followin
 
 ### Cloud detection: Naive, auto-encoder and U-Net
 
-Two shellscripts (`ae.sh` and `unet.sh`) are provided which contain all the settings used in order to train three replications of each of the networks. To manually train a model, run the `main.py` script in the `cloud_detection` directory. Use the flag `--help` in order to get a summary of all the provided options.
+Two shellscripts (`ae.sh` and `unet.sh`) are provided which contain all the settings used in order to train three replications of each of the networks. To manually train a model, run the `main.py` script in the `cloud_detection` directory. Use the flag `--help` in order to get a summary of all the provided options. For the shellscripts, run them directly from the directory where they are saved, and make sure to save the datasets in a directory "datasets" (otherwise, change the paths in the scripts accordingly).
 
 ```shell
 python3 main.py [options]
@@ -97,7 +100,7 @@ python3 -m CloudGAN --img [path_to_input] --target [path_to_target]
 
 In this example, the generated mask and output files are stored in their given paths. Additionally, it is possible to provide your own cloud mask. In this case, use the `--mask` option to provide the path to your mask (three channels, so 256x256x3, with values in [0,255]) and enable the `--no_AE` flag. The `--target` is optional, but if it is given then it computes the SSIM and PSNR values between the generated and target image. Lastly, there is the option to show more debug-messages from TensorFlow. To enable this add the `--debug` option to your command.
 
-For the GAN-weights, link to the `checkpoint` file. As for the AE-weights, link to the `checkpoint.h5` file.
+For the GAN-weights, link to the directory containing all files (i.e., the directory `SN_PatchGAN` that is downloaded with the provided link above). As for the AE-weights, link to the `checkpoint.h5` file.
 
 
 
